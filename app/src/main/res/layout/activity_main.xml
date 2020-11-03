@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,6 +8,10 @@
     tools:context=".MainActivity"
     >
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" >
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -17,11 +22,23 @@
         android:theme="?attr/actionBarTheme"
         app:title="Petagram"
         app:titleMarginStart="140dp"
+        app:layout_scrollFlags="enterAlways"
         app:logo="@drawable/ic_pet"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/idRecycler"
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablalayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/toolbar"/>
-</RelativeLayout>
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

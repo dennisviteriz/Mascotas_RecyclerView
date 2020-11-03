@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FragPerfil">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/mas1"
+        android:layout_gravity="center_horizontal"
+        android:background="#FAF8F8"
+        app:civ_border_color="#3f51b5"
+        app:civ_border_width="4dp"
+        app:civ_shadow="true"
+        app:civ_shadow_radius="10dp"
+        app:civ_shadow_color="#3f51b5" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="34dp"
+        android:textColor="#111111"
+        android:text="Ronny"
+        android:layout_marginTop="270dp"
+        android:layout_marginLeft="160dp"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/idRecycler2"
+        android:layout_width="match_parent"
+        android:layout_height="283dp"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="350dp" />
+
+
+</FrameLayout>
